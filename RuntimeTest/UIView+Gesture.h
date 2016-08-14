@@ -10,4 +10,6 @@
 
 @interface UIView (Gesture)
 
+- (void)setTapGestureActionWithBlock:(void(^)())block;
+
 @end

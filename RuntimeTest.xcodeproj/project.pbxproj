@@ -15,6 +15,9 @@
 		AB3B4B461D5C7266000ADF59 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB3B4B441D5C7266000ADF59 /* LaunchScreen.storyboard */; };
 		AB3B4B511D5C7267000ADF59 /* RuntimeTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AB3B4B501D5C7267000ADF59 /* RuntimeTestTests.m */; };
 		AB3B4B5C1D5C7267000ADF59 /* RuntimeTestUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = AB3B4B5B1D5C7267000ADF59 /* RuntimeTestUITests.m */; };
+		ABAF50C31D60940500F89027 /* UIView+Gesture.m in Sources */ = {isa = PBXBuildFile; fileRef = ABAF50C21D60940500F89027 /* UIView+Gesture.m */; };
+		ABAF50D21D60CF0000F89027 /* NSObject+Swizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = ABAF50CF1D60CF0000F89027 /* NSObject+Swizzling.m */; };
+		ABAF50D31D60CF0000F89027 /* UIViewController+Tracking.m in Sources */ = {isa = PBXBuildFile; fileRef = ABAF50D11D60CF0000F89027 /* UIViewController+Tracking.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,12 @@
 		AB3B4B571D5C7267000ADF59 /* RuntimeTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RuntimeTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB3B4B5B1D5C7267000ADF59 /* RuntimeTestUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RuntimeTestUITests.m; sourceTree = "<group>"; };
 		AB3B4B5D1D5C7267000ADF59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ABAF50C11D60940500F89027 /* UIView+Gesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Gesture.h"; sourceTree = "<group>"; };
+		ABAF50C21D60940500F89027 /* UIView+Gesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Gesture.m"; sourceTree = "<group>"; };
+		ABAF50CE1D60CF0000F89027 /* NSObject+Swizzling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Swizzling.h"; sourceTree = "<group>"; };
+		ABAF50CF1D60CF0000F89027 /* NSObject+Swizzling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Swizzling.m"; sourceTree = "<group>"; };
+		ABAF50D01D60CF0000F89027 /* UIViewController+Tracking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Tracking.h"; sourceTree = "<group>"; };
+		ABAF50D11D60CF0000F89027 /* UIViewController+Tracking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Tracking.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +110,9 @@
 		AB3B4B351D5C7266000ADF59 /* RuntimeTest */ = {
 			isa = PBXGroup;
 			children = (
+				ABAF50CD1D60CF0000F89027 /* SwizzlingExtension */,
+				ABAF50C11D60940500F89027 /* UIView+Gesture.h */,
+				ABAF50C21D60940500F89027 /* UIView+Gesture.m */,
 				AB3B4B391D5C7266000ADF59 /* AppDelegate.h */,
 				AB3B4B3A1D5C7266000ADF59 /* AppDelegate.m */,
 				AB3B4B3C1D5C7266000ADF59 /* ViewController.h */,
@@ -138,6 +150,17 @@
 				AB3B4B5D1D5C7267000ADF59 /* Info.plist */,
 			);
 			path = RuntimeTestUITests;
+			sourceTree = "<group>";
+		};
+		ABAF50CD1D60CF0000F89027 /* SwizzlingExtension */ = {
+			isa = PBXGroup;
+			children = (
+				ABAF50CE1D60CF0000F89027 /* NSObject+Swizzling.h */,
+				ABAF50CF1D60CF0000F89027 /* NSObject+Swizzling.m */,
+				ABAF50D01D60CF0000F89027 /* UIViewController+Tracking.h */,
+				ABAF50D11D60CF0000F89027 /* UIViewController+Tracking.m */,
+			);
+			path = SwizzlingExtension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -272,7 +295,10 @@
 			files = (
 				AB3B4B3E1D5C7266000ADF59 /* ViewController.m in Sources */,
 				AB3B4B3B1D5C7266000ADF59 /* AppDelegate.m in Sources */,
+				ABAF50C31D60940500F89027 /* UIView+Gesture.m in Sources */,
+				ABAF50D21D60CF0000F89027 /* NSObject+Swizzling.m in Sources */,
 				AB3B4B381D5C7266000ADF59 /* main.m in Sources */,
+				ABAF50D31D60CF0000F89027 /* UIViewController+Tracking.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -498,6 +524,7 @@
 				AB3B4B621D5C7267000ADF59 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AB3B4B631D5C7267000ADF59 /* Build configuration list for PBXNativeTarget "RuntimeTestTests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +533,7 @@
 				AB3B4B651D5C7267000ADF59 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AB3B4B661D5C7267000ADF59 /* Build configuration list for PBXNativeTarget "RuntimeTestUITests" */ = {
 			isa = XCConfigurationList;
@@ -514,6 +542,7 @@
 				AB3B4B681D5C7267000ADF59 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
