@@ -18,6 +18,7 @@
 		ABAF50C31D60940500F89027 /* UIView+Gesture.m in Sources */ = {isa = PBXBuildFile; fileRef = ABAF50C21D60940500F89027 /* UIView+Gesture.m */; };
 		ABAF50D21D60CF0000F89027 /* NSObject+Swizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = ABAF50CF1D60CF0000F89027 /* NSObject+Swizzling.m */; };
 		ABAF50D31D60CF0000F89027 /* UIViewController+Tracking.m in Sources */ = {isa = PBXBuildFile; fileRef = ABAF50D11D60CF0000F89027 /* UIViewController+Tracking.m */; };
+		ABAF50D61D61E44500F89027 /* NSMutableArray+Swizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = ABAF50D51D61E44500F89027 /* NSMutableArray+Swizzling.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,8 @@
 		ABAF50CF1D60CF0000F89027 /* NSObject+Swizzling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Swizzling.m"; sourceTree = "<group>"; };
 		ABAF50D01D60CF0000F89027 /* UIViewController+Tracking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Tracking.h"; sourceTree = "<group>"; };
 		ABAF50D11D60CF0000F89027 /* UIViewController+Tracking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Tracking.m"; sourceTree = "<group>"; };
+		ABAF50D41D61E44500F89027 /* NSMutableArray+Swizzling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+Swizzling.h"; sourceTree = "<group>"; };
+		ABAF50D51D61E44500F89027 /* NSMutableArray+Swizzling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+Swizzling.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +162,8 @@
 				ABAF50CF1D60CF0000F89027 /* NSObject+Swizzling.m */,
 				ABAF50D01D60CF0000F89027 /* UIViewController+Tracking.h */,
 				ABAF50D11D60CF0000F89027 /* UIViewController+Tracking.m */,
+				ABAF50D41D61E44500F89027 /* NSMutableArray+Swizzling.h */,
+				ABAF50D51D61E44500F89027 /* NSMutableArray+Swizzling.m */,
 			);
 			path = SwizzlingExtension;
 			sourceTree = "<group>";
@@ -293,6 +298,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABAF50D61D61E44500F89027 /* NSMutableArray+Swizzling.m in Sources */,
 				AB3B4B3E1D5C7266000ADF59 /* ViewController.m in Sources */,
 				AB3B4B3B1D5C7266000ADF59 /* AppDelegate.m in Sources */,
 				ABAF50C31D60940500F89027 /* UIView+Gesture.m in Sources */,

@@ -16,10 +16,10 @@
 
 @implementation ViewController
 
-//- (void)viewWillAppear:(BOOL)animated {
-//    [super viewWillAppear:YES];
-//    NSLog(@"test");
-//}
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:YES];
+    NSLog(@"test");
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -32,6 +32,22 @@
         [self showViewController:vc sender:self];
     }];
     [self.view addSubview:view];
+    
+    // NSMutableArray Swizzling test
+    NSString *s = nil;
+    NSArray *array = @[@"123", @"tttt", s, @"321321"];
+    NSMutableArray *mArray = [NSMutableArray arrayWithArray:array];
+    [mArray addObject:nil];
+    [mArray addObject:@"add Obj"];
+    [mArray insertObject:@"test" atIndex:20];
+    [mArray insertObject:nil atIndex:0];
+    [mArray insertObject:@"insert Obj" atIndex:2];
+    [mArray removeObjectAtIndex:80];
+    [mArray removeObject:nil];
+    [[NSMutableArray array] removeObjectAtIndex:0];
+    [mArray objectAtIndex:30];
+    NSLog(@"%@", [mArray objectAtIndex:0]);
+    NSLog(@"%@", mArray);
 }
 
 - (void)didReceiveMemoryWarning {

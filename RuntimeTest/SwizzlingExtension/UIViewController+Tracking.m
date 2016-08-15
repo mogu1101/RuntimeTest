@@ -15,7 +15,7 @@
 + (void)load {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        [self swizzlingSelector:@selector(viewWillAppear:) withSwizzledSelector:@selector(jj_viewWillAppear:)];
+        [self swizzleInstanceMethodWithSelector:@selector(viewWillAppear:) swizzledSelector:@selector(jj_viewWillAppear:)];
     });
 }
 
